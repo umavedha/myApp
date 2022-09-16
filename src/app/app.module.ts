@@ -7,6 +7,8 @@ import { HeadercomponentComponent } from './headercomponent/headercomponent.comp
 import { FootercomponentComponent } from './footercomponent/footercomponent.component';
 import { MainareacomponentComponent } from './mainareacomponent/mainareacomponent.component';
 import { SidebarcomponentComponent } from './sidebarcomponent/sidebarcomponent.component';
+import { DatabindingComponent } from './databinding/databinding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,11 @@ import { SidebarcomponentComponent } from './sidebarcomponent/sidebarcomponent.c
     HeadercomponentComponent,
     FootercomponentComponent,
     MainareacomponentComponent,
-    SidebarcomponentComponent
+    SidebarcomponentComponent,
+    DatabindingComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

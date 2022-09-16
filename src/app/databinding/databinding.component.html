@@ -1,0 +1,44 @@
+<p>databinding works!</p>
+<div>
+    <h4>
+        view to controller
+    </h4>
+    <input type="text" (keyup)="userInput($event)">
+
+</div>
+<div>
+    <h4>
+        controller to view
+    </h4>
+    <div>
+        {{data}}
+    </div>
+</div>
+<div>
+    <h4>
+        property binding
+    </h4>
+    <div (click)="enable()">click me</div>
+    <button [disabled]="isDisable" (click)="onBtnClick()">Dont click me!</button>
+</div>
+<div>
+    <h4>
+        two way databinding
+    </h4>
+    <div>
+        type-1
+        <input type="text" (keyup)="userInput($event)">
+        <div>
+            {{userData}}
+        </div>
+    </div>
+    <div>
+        type-2
+        <input type="text" [(ngModel)]="inputData">
+        <div>
+            {{inputData}}
+        </div>
+    </div>
+
+
+</div>
