@@ -9,6 +9,7 @@ import { MainareacomponentComponent } from './mainareacomponent/mainareacomponen
 import { SidebarcomponentComponent } from './sidebarcomponent/sidebarcomponent.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
+import { DatabindtaskComponent } from './databindtask/databindtask.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     MainareacomponentComponent,
     SidebarcomponentComponent,
     DatabindingComponent,
+    DatabindtaskComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

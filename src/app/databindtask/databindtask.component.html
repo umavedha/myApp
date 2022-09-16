@@ -1,0 +1,10 @@
+<div>
+    <label for="">Username</label>
+    <div>
+        <input type="text" name="" id="" (keyup)="enableBtn($event)" [(ngModel)]="username">
+    </div>
+    <p>{{username}}</p>
+</div>
+<div>
+    <button [disabled]="isDisable" (click)="clearInput()">Clear</button>
+</div>
