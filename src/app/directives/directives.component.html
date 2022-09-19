@@ -2,7 +2,7 @@
     <h5 [ngStyle]="{'font-size':'28px'}">
         List of temples
     </h5>
-    <ul>
+    <ul class="templeList">
         <li [ngClass]="'listStyle'" *ngFor="let temple of temples; index as i">
             {{i+1}}.{{temple}}
         </li>
