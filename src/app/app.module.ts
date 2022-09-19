@@ -10,6 +10,7 @@ import { SidebarcomponentComponent } from './sidebarcomponent/sidebarcomponent.c
 import { DatabindingComponent } from './databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
 import { DatabindtaskComponent } from './databindtask/databindtask.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { DatabindtaskComponent } from './databindtask/databindtask.component';
     SidebarcomponentComponent,
     DatabindingComponent,
     DatabindtaskComponent,
+    DirectivesComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

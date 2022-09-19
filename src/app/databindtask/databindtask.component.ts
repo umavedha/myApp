@@ -7,12 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatabindtaskComponent implements OnInit {
   userName: string = '';
-  isDisable: boolean = true;
   constructor() {}
 
   ngOnInit(): void {}
   clearInput() {
     this.userName = '';
-    this.isDisable = true;
   }
 }

@@ -1,0 +1,44 @@
+<div>
+    <h5 [ngStyle]="{'font-size':'28px'}">
+        List of temples
+    </h5>
+    <ul>
+        <li [ngClass]="'listStyle'" *ngFor="let temple of temples; index as i">
+            {{i+1}}.{{temple}}
+        </li>
+    </ul>
+
+</div>
+<div>
+    <p [ngClass]="'title'">
+        kapaleeswarar temple
+    </p>
+</div>
+<button (click)="showTempleInfo()">Show Temple</button>
+<div *ngIf="show">
+    <img src="../../assets/kapaleeswarar-temple.jpg" alt="">
+
+</div>
+
+<div>
+    <p [ngClass]="show?'content':'modifiedContent'">The Kapaleeshwarar Temple in Chennai is one of the popular temples
+        in
+        Tamil Nadu. The 7th century Amrirulgu
+        Kapaleeswarar temple is dedicated to Goddess Parvati in the form of Karpagambal or the Goddess of the
+        Wish-Yielding
+        Tree and Lord Shiva.</p>
+    <ul>
+        <li *ngFor="let detail of timingDetails">
+            <p>
+                Timing:{{detail.timing}}
+            </p>
+            <p>
+                Closed:{{detail.closed}}
+            </p>
+            <p>
+                Charge: {{detail.charge}}
+            </p>
+        </li>
+    </ul>
+
+</div>
