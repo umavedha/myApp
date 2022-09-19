@@ -1,10 +1,10 @@
 <div>
     <label for="">Username</label>
     <div>
-        <input type="text" name="" id="" (keyup)="enableBtn($event)" [(ngModel)]="username">
+        <input type="text" name="" id="" [(ngModel)]="userName">
     </div>
-    <p>{{username}}</p>
+    <p>{{userName}}</p>
 </div>
 <div>
-    <button [disabled]="isDisable" (click)="clearInput()">Clear</button>
+    <button [disabled]="!userName" (click)="clearInput()">Clear</button>
 </div>

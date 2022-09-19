@@ -6,20 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./databindtask.component.scss'],
 })
 export class DatabindtaskComponent implements OnInit {
-  username: string = '';
+  userName: string = '';
   isDisable: boolean = true;
   constructor() {}
 
   ngOnInit(): void {}
   clearInput() {
-    this.username = '';
+    this.userName = '';
     this.isDisable = true;
-  }
-  enableBtn(event: any) {
-    if (event.target.value != '') {
-      this.isDisable = false;
-    } else {
-      this.isDisable = true;
-    }
   }
 }
