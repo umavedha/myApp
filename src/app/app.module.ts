@@ -13,6 +13,8 @@ import { DatabindtaskComponent } from './databindtask/databindtask.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { UsersListComponent } from './users-list/users-list.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ChildComponent } from './child/child.component';
     DirectivesComponent,
     ParentComponent,
     ChildComponent,
+    UsersListComponent,
+    UserDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

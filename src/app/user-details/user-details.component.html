@@ -1,0 +1,17 @@
+<h3>
+    Users List
+</h3>
+<ng-container *ngFor="let user of users,index as i">
+    <div class="user">
+        <div class="profile">
+            <img [src]="user.avatar" alt="">
+        </div>
+        <div class="user-details">
+            <p class="user-name">{{user.firstName}} {{user.lastName}}</p>
+            <p class="user-email">{{user.email}}</p>
+        </div>
+        <div class="cta">
+            <button class="remove-user" (click)="removeUser(i)">Remove User</button>
+        </div>
+    </div>
+</ng-container>
