@@ -1,1 +1,5 @@
-<app-user-details [users]="usersList" (removeUserData)="userRemoval($event)"></app-user-details>
+<!-- <app-user-details [users]="usersList" (removeUserData)="userRemoval($event)"></app-user-details> -->
+<h3>Users List</h3>
+<ng-container *ngFor="let user of usersList,index as i">
+    <app-user-details [userData]="user" [userIndex]="i" (removeUserData)="userRemoval($event)"></app-user-details>
+</ng-container>
