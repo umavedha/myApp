@@ -11,6 +11,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
 import { DatabindtaskComponent } from './databindtask/databindtask.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { DirectivesComponent } from './directives/directives.component';
     DatabindingComponent,
     DatabindtaskComponent,
     DirectivesComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

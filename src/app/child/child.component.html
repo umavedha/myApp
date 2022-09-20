@@ -1,0 +1,20 @@
+<!-- <p>child works!</p> -->
+<p>{{user}}</p>
+
+
+<div class="child">
+    <h5>
+        child to parent
+    </h5>
+    <div>
+        <div>
+            <label for="">Username</label>
+            <div>
+                <input type="text" [(ngModel)]="newUser" name="" id="">
+            </div>
+        </div>
+        <div>
+            <button (click)="toParent()">Send to parent</button>
+        </div>
+    </div>
+</div>

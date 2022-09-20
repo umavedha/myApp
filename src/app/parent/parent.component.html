@@ -1,0 +1,13 @@
+<div class="parentComponent">
+    <p>parent to child</p>
+    <app-child [user]="userData" (sendToParent)="fromChild($event)"></app-child>
+    <!-- <p>{{newUserData}}</p> -->
+    <!-- <input type="text" [(ngModel)]="userData"> -->
+    <p>users list</p>
+    <ng-container>
+        <ul>
+            <li *ngFor="let newUserData of newUserDatas">{{newUserData}}</li>
+        </ul>
+    </ng-container>
+
+</div>
