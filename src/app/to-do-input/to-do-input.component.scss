@@ -1,0 +1,29 @@
+.task{
+    border-radius: 10px;
+    border: 2px solid rebeccapurple;
+    width: 83%;
+    height: 100px;
+    margin-left: 122px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.taskInput{
+    width: 600px;
+    height: 32px;
+    border-radius: 2px;
+}
+
+.todoForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.addTaskBtn{
+    width: 80px;
+    height: 40px;
+    background-color:burlywood;
+}

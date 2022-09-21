@@ -1,0 +1,16 @@
+<div>
+    <app-to-do-input (addNewTask)="newTask($event)"></app-to-do-input>
+</div>
+
+<div class="todoList">
+    <div class="listHead">
+        <h2>
+            My To Do List
+        </h2>
+    </div>
+    <div class="list" *ngFor="let task of taskList">
+        <input type="checkbox" [(ngModel)]="isCheck" name="" id="">
+        <label [ngStyle]="{'text-decoration':isCheck?'line-through':'none'}" class="taskData">{{task}}</label>
+
+    </div>
+</div>

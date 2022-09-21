@@ -15,6 +15,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { ToDoInputComponent } from './to-do-input/to-do-input.component';
+import { ToDoListComponent } from './to-do-list/to-do-list.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     ChildComponent,
     UsersListComponent,
     UserDetailsComponent,
+    ToDoInputComponent,
+    ToDoListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
