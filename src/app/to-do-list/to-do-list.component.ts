@@ -11,7 +11,7 @@ export class ToDoListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  newTask(event: any) {
+  newTask(event: string) {
     this.taskList.push(event);
   }
 }

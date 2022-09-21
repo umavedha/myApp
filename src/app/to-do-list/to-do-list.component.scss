@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
 .todoList{
     border-radius: 10px;
     border: 2px solid rebeccapurple;
@@ -5,14 +6,21 @@
     height: auto;
     margin-left: 122px;
     margin-top: 30px;
+    // background-color:rgb(201, 160, 241);
 }
 .list{
     padding: 10px;
+
 }
 .taskData{
     padding-left: 5px;
+    font-family: 'Poppins';
 }
 .listHead {
     display: flex;
     justify-content: center;
+    .heading{
+        color: rebeccapurple;
+        font-family: 'Poppins';
+    }
 }

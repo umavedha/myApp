@@ -1,29 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
 .task{
     border-radius: 10px;
     border: 2px solid rebeccapurple;
     width: 83%;
-    height: 100px;
+    height: 150px;
     margin-left: 122px;
     margin-top: 30px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
     
 }
 .taskInput{
+    color: black;
     width: 600px;
     height: 32px;
-    border-radius: 2px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.todoForm{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+
 .addTaskBtn{
-    width: 80px;
-    height: 40px;
-    background-color:burlywood;
+    width: 90px;
+    height: 30px;
+    background-color:rgb(127, 4, 249);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 4px;
+    margin-top: 10px;
+    font-family: 'Poppins';
+}
+.disabledBtn{
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 4px;
+    margin-top: 10px;
+    font-family: 'Poppins';
+
+}
+.taskNameLabel {
+    color: rebeccapurple;
+    font-size: 20px;
+    font-family: 'Poppins';
 }

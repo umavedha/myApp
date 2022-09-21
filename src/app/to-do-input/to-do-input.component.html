@@ -5,7 +5,8 @@
             <input class="taskInput" [(ngModel)]="taskName" type="text">
         </div>
         <div>
-            <button (click)="addTask()">Add Task</button>
+            <button [ngClass]="!taskName?'disabledBtn':'addTaskBtn'" [disabled]="!taskName" (click)="addTask()">Add
+                Task</button>
         </div>
     </div>
 </div>
