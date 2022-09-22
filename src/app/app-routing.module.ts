@@ -5,6 +5,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { MainareacomponentComponent } from './mainareacomponent/mainareacomponent.component';
 import { OurgoalComponent } from './ourgoal/ourgoal.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TeamComponent } from './team/team.component';
 
 const routes: Routes = [
   {
@@ -14,6 +16,10 @@ const routes: Routes = [
       {
         path: 'ourgoals',
         component: OurgoalComponent,
+      },
+      {
+        path: ':teamId',
+        component: TeamComponent,
       },
     ],
   },
@@ -30,6 +36,10 @@ const routes: Routes = [
         component: ContactFormComponent,
       },
     ],
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
   },
 ];
 

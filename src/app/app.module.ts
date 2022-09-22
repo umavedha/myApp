@@ -21,6 +21,8 @@ import { AboutuscomponentComponent } from './aboutuscomponent/aboutuscomponent.c
 import { ContactusComponent } from './contactus/contactus.component';
 import { OurgoalComponent } from './ourgoal/ourgoal.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { TeamComponent } from './team/team.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     ContactusComponent,
     OurgoalComponent,
     ContactFormComponent,
+    TeamComponent,
+    PageNotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
