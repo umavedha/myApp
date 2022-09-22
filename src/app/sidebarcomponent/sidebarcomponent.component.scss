@@ -1,4 +1,14 @@
 .sideMenu{
     height: 600px;
-    background-color: #c4cebc;
+    background-color: #defac7;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    a{
+        margin-top: 10px;
+        font-size: 20px;
+        text-decoration: none;
+        color: rgb(218, 123, 7);
+    }
 }

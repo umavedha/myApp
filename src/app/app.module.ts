@@ -18,6 +18,9 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { ToDoInputComponent } from './to-do-input/to-do-input.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
 import { AboutuscomponentComponent } from './aboutuscomponent/aboutuscomponent.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { OurgoalComponent } from './ourgoal/ourgoal.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { AboutuscomponentComponent } from './aboutuscomponent/aboutuscomponent.c
     ToDoInputComponent,
     ToDoListComponent,
     AboutuscomponentComponent,
+    ContactusComponent,
+    OurgoalComponent,
+    ContactFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
