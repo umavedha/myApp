@@ -17,6 +17,7 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ToDoInputComponent } from './to-do-input/to-do-input.component';
 import { ToDoListComponent } from './to-do-list/to-do-list.component';
+import { AboutuscomponentComponent } from './aboutuscomponent/aboutuscomponent.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ToDoListComponent } from './to-do-list/to-do-list.component';
     UserDetailsComponent,
     ToDoInputComponent,
     ToDoListComponent,
+    AboutuscomponentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
