@@ -1,0 +1,19 @@
+<div>
+    <h4>{{isUpdate?'Edit User Form':'Add User Form'}}</h4>
+</div>
+<div>
+    <label for="username">Name</label>
+    <div>
+        <input type="text" [(ngModel)]="name" name="username">
+    </div>
+</div>
+<div>
+    <label for="useremail">Email</label>
+    <div>
+        <input type="email" [(ngModel)]="email" name="useremail">
+    </div>
+</div>
+<div>
+    <button *ngIf="!isUpdate" (click)="addUser()">Add User</button>
+    <button *ngIf="isUpdate" (click)="editUser()">Edit User</button>
+</div>

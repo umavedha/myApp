@@ -23,6 +23,8 @@ import { OurgoalComponent } from './ourgoal/ourgoal.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { TeamComponent } from './team/team.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { FormComponent } from './form/form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,8 +48,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ContactFormComponent,
     TeamComponent,
     PageNotFoundComponent,
+    FormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
