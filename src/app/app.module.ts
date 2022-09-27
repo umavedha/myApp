@@ -8,7 +8,7 @@ import { FootercomponentComponent } from './footercomponent/footercomponent.comp
 import { MainareacomponentComponent } from './mainareacomponent/mainareacomponent.component';
 import { SidebarcomponentComponent } from './sidebarcomponent/sidebarcomponent.component';
 import { DatabindingComponent } from './databinding/databinding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatabindtaskComponent } from './databindtask/databindtask.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ParentComponent } from './parent/parent.component';
@@ -50,7 +50,13 @@ import { HttpClientModule } from '@angular/common/http';
     PageNotFoundComponent,
     FormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

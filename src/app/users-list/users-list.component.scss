@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.userlistPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .adduserBtn {
+        font-size: 20px;
+        font-family: 'Poppins';
+        background-color: rgb(106, 52, 106);
+        color: white;
+        border-radius: 10px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    
+    h3 {
+        font-size: 25px;
+        font-family: 'Poppins';
+    }
+    .userlistContainer{
+        margin-top: 20px;
+    }
+
+
+}

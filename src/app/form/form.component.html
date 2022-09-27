@@ -1,4 +1,5 @@
-<div>
+<!--template driven form -->
+<!-- <div>
     <h4>{{isUpdate?'Edit User Form':'Add User Form'}}</h4>
 </div>
 <div>
@@ -16,4 +17,42 @@
 <div>
     <button *ngIf="!isUpdate" (click)="addUser()">Add User</button>
     <button *ngIf="isUpdate" (click)="editUser()">Edit User</button>
+</div> -->
+
+<!-- reactive form -->
+<div class="backlink">
+    <a (click)="backToForm()">Back to List</a>
+</div>
+
+<div class="userForm">
+
+    <div>
+        <h4>{{isUpdate?'Edit User Form':'Add User Form'}}</h4>
+    </div>
+    <div [formGroup]="user">
+        <div class="name-input">
+            <label class="labelName" for="username">Name:</label>
+            <div>
+                <input class="inputBox" type="text" required minlength="2" formControlName="username" name="username">
+            </div>
+            <div class="error-danger"
+                *ngIf="form['username']?.invalid &&( form['username'].dirty || form['username'].touched)">
+                <div *ngIf="form['username'].errors?.required">Name is required</div>
+                <div *ngIf="form['username'].errors?.minlength">Name should be of length above 2</div>
+            </div>
+        </div>
+        <div class="email-input">
+            <label class="labelName" for="useremail">Email:</label>
+            <div>
+                <input class="inputBox" type="email" required formControlName="email" name="useremail">
+            </div>
+            <div class="error-danger" *ngIf="form['email']?.invalid &&( form['email'].dirty || form['email'].touched)">
+                <div *ngIf="form['email'].errors?.required">Email is required</div>
+            </div>
+        </div>
+        <div class="add-edit">
+            <button *ngIf="!isUpdate" [disabled]="user.invalid" (click)="addUser()">Add User</button>
+            <button *ngIf="isUpdate" (click)="editUser()">Edit User</button>
+        </div>
+    </div>
 </div>

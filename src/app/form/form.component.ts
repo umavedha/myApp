@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormService } from '../form.service';
+import {
+  FormControl,
+  FormGroup,
+  FormBuilder,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -8,20 +14,37 @@ import { FormService } from '../form.service';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
-  name: string = '';
+  username: string = '';
   email: string = '';
   userId: number = 0;
   isUpdate: boolean = false;
   userData: any;
+  user: any;
 
   constructor(
     private formService: FormService,
     private router: Router,
-    private aRoute: ActivatedRoute
+    private aRoute: ActivatedRoute,
+    private fb: FormBuilder
   ) {}
 
   ngOnInit(): void {
-    this.aRoute.params.subscribe((user:any) => {
+    // initialising reactive form using form group
+    // this.user = new FormGroup({
+    //   name: new FormControl(null, [
+    //     Validators.required,
+    //     Validators.minLength(2),
+    //   ]),
+    //   email: new FormControl(null, Validators.email),
+    // });
+
+    // using form builder
+    this.user = this.fb.group({
+      username: [null, [Validators.required, Validators.minLength(2)]],
+      email: [null, Validators.email],
+    });
+
+    this.aRoute.params.subscribe((user: any) => {
       this.isUpdate = true;
       console.log(user);
       this.isUpdate = user.hasOwnProperty('userId') ? true : false;
@@ -31,31 +54,38 @@ export class FormComponent implements OnInit {
       }
     });
   }
-  addUser() {
-    this.formService
-      .addUserData({ username: this.name, email: this.email })
-      .subscribe((userData:any) => {
-        console.log(userData);
-        this.router.navigate(['userlist']);
-      });
+  get form() {
+    return this.user.controls;
   }
+  addUser() {
+    let userDetail = this.user.value;
+
+    this.formService.addUserData(userDetail).subscribe((userData: any) => {
+      console.log(userData);
+      this.router.navigate(['userlist']);
+    });
+  }
+
   getUserById(userId: number) {
-    this.formService.getUserById(userId).subscribe((userDetail:any) => {
+    this.formService.getUserById(userId).subscribe((userDetail: any) => {
       console.log(userDetail, 'userdata');
       this.userData = userDetail;
-      this.name = this.userData[0].username;
-      this.email = this.userData[0].email;
+      // this.name = this.userData[0].username;
+      // this.email = this.userData[0].email;
+      this.user.patchValue(this.userData[0]);
     });
   }
   editUser() {
+    let userDetail = this.user.value;
+
     this.formService
-      .updateUserDataById(this.userId, {
-        username: this.name,
-        email: this.email,
-      })
+      .updateUserDataById(this.userId, userDetail)
       .subscribe((data) => {
         console.log(data);
         this.router.navigate(['userlist']);
       });
+  }
+  backToForm() {
+    this.router.navigate(['userlist']);
   }
 }

@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.userForm{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h4{
+        font-family: "Poppins";
+        margin: 9px;
+        font-size: 24px;
+    }
+    .labelName{
+       font-family: 'Poppins';
+       font-size: 14px;
+       padding-bottom: 5px
+    }
+    .inputBox{
+        width: 203px;
+        height: 25px;
+        border-radius: 16px;
+        border: 1px solid grey;
+        padding-left: 14px;
+    }
+    .name-input{
+        margin: 8px;
+    }
+    .email-input {
+        margin: 8px;
+    }
+    .add-edit{
+        display: flex;
+        justify-content: center;
+        button{
+                height: 24px;
+                width: 88px;
+                margin-top: 15px;
+                background-color:#c6c6e7;
+                border-radius: 20px;
+                border: none;
+                font-size: 12px;
+                font-family: 'Poppins';
+        }
+    }
+    .error-danger{
+        color: red;
+        font-size: 12px;
+    }
+}
+.backlink{
+    a{
+        padding: 22px;
+        color: #4c197b;
+        font-family: 'Poppins';
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

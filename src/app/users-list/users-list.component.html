@@ -1,23 +1,28 @@
 <!-- <app-user-details [users]="usersList" (removeUserData)="userRemoval($event)"></app-user-details> -->
-<h3>Users List</h3>
-<span (click)="addUserForm()">Add user</span>
 <!-- <ng-container *ngFor="let user of usersList,index as i">
     <app-user-details [userData]="user" [userIndex]="i" (removeUserData)="userRemoval($event)"></app-user-details>
 </ng-container> -->
-<table>
-    <tr>
-        <th>S.no</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Action</th>
-    </tr>
-    <tr *ngFor="let user of usersList,index as i">
-        <td>{{i+1}}</td>
-        <td>{{user.username}}</td>
-        <td>{{user.email}}</td>
-        <td>
-            <span (click)="editUser(user.id)">Edit</span>
-            <span (click)="deleteUser(user.id)">Delete</span>
-        </td>
-    </tr>
-</table>
+<div class="userlistPage">
+    <h3>Users List</h3>
+    <span class="adduserBtn" (click)="addUserForm()">Add user</span>
+
+    <div class="userlistContainer">
+        <table class="userTable">
+            <tr>
+                <th>S.no</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+            <tr *ngFor="let user of usersList,index as i">
+                <td>{{i+1}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>
+                    <span (click)="editUser(user.id)">Edit</span>
+                    <span (click)="deleteUser(user.id)">Delete</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
