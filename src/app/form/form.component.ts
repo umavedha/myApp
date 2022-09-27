@@ -21,7 +21,7 @@ export class FormComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.aRoute.params.subscribe((user) => {
+    this.aRoute.params.subscribe((user:any) => {
       this.isUpdate = true;
       console.log(user);
       this.isUpdate = user.hasOwnProperty('userId') ? true : false;
@@ -33,23 +33,26 @@ export class FormComponent implements OnInit {
   }
   addUser() {
     this.formService
-      .addUserData({ name: this.name, email: this.email })
-      .subscribe((userData) => {
+      .addUserData({ username: this.name, email: this.email })
+      .subscribe((userData:any) => {
         console.log(userData);
         this.router.navigate(['userlist']);
       });
   }
   getUserById(userId: number) {
-    this.formService.getUserById(userId).subscribe((userDetail) => {
-      console.log(userDetail);
+    this.formService.getUserById(userId).subscribe((userDetail:any) => {
+      console.log(userDetail, 'userdata');
       this.userData = userDetail;
-      this.name = this.userData.name;
-      this.email = this.userData.email;
+      this.name = this.userData[0].username;
+      this.email = this.userData[0].email;
     });
   }
   editUser() {
     this.formService
-      .updateUserDataById(this.userId, { name: this.name, email: this.email })
+      .updateUserDataById(this.userId, {
+        username: this.name,
+        email: this.email,
+      })
       .subscribe((data) => {
         console.log(data);
         this.router.navigate(['userlist']);
