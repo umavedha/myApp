@@ -36,7 +36,7 @@
                 <input class="inputBox" type="text" required minlength="2" formControlName="username" name="username">
             </div>
             <div class="error-danger"
-                *ngIf="form['username']?.invalid &&( form['username'].dirty || form['username'].touched)">
+                *ngIf="form['username'].invalid &&( form['username'].dirty || form['username'].touched)">
                 <div *ngIf="form['username'].errors?.required">Name is required</div>
                 <div *ngIf="form['username'].errors?.minlength">Name should be of length above 2</div>
             </div>

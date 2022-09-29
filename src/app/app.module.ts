@@ -25,6 +25,7 @@ import { TeamComponent } from './team/team.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormComponent } from './form/form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { HttpClientModule } from '@angular/common/http';
     TeamComponent,
     PageNotFoundComponent,
     FormComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
