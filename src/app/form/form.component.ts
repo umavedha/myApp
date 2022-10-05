@@ -31,14 +31,15 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
     // initialising reactive form using form group
     // this.user = new FormGroup({
-    //   name: new FormControl(null, [
+    //   username: new FormControl('', [
     //     Validators.required,
-    //     Validators.minLength(2),
+    //     Validators.minLength(3),
     //   ]),
-    //   email: new FormControl(null, Validators.email),
+    //   email: new FormControl('', [Validators.required]),
     // });
 
     // using form builder
+
     this.user = this.fb.group({
       username: [null, [Validators.required, Validators.minLength(2)]],
       email: [null, Validators.email],
@@ -59,11 +60,14 @@ export class FormComponent implements OnInit {
   }
   addUser() {
     let userDetail = this.user.value;
+    console.log(this.user);
 
-    this.formService.addUserData(userDetail).subscribe((userData: any) => {
-      console.log(userData);
-      this.router.navigate(['userlist']);
-    });
+    console.log(userDetail);
+
+    // this.formService.addUserData(userDetail).subscribe((userData: any) => {
+    //   console.log(userData);
+    //   this.router.navigate(['userlist']);
+    // });
   }
 
   getUserById(userId: number) {

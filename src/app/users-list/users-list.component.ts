@@ -8,6 +8,10 @@ interface User {
   lastName: string;
   avatar: string;
 }
+interface Cols {
+  field: string;
+  header: string;
+}
 @Component({
   selector: 'app-users-list',
   templateUrl: './users-list.component.html',
@@ -15,6 +19,8 @@ interface User {
 })
 export class UsersListComponent implements OnInit {
   usersList: any;
+  cols: any;
+  selectedUsers: any;
 
   constructor(
     private appService: FormService,
@@ -23,6 +29,12 @@ export class UsersListComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.cols = [
+      { field: 'username', header: 'Name' },
+      { field: 'email', header: 'Email' },
+      // { field: 'message', header: 'Category' },
+      // { field: 'quantity', header: 'Quantity' },
+    ];
     //   this.usersList = [
     //     {
     //       id: 7,

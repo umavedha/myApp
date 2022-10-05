@@ -1,3 +1,4 @@
+<p>userlist works</p>
 <!-- <app-user-details [users]="usersList" (removeUserData)="userRemoval($event)"></app-user-details> -->
 <!-- <ng-container *ngFor="let user of usersList,index as i">
     <app-user-details [userData]="user" [userIndex]="i" (removeUserData)="userRemoval($event)"></app-user-details>
@@ -6,7 +7,7 @@
     <h3>Users List</h3>
     <span class="adduserBtn" (click)="addUserForm()">Add user</span>
 
-    <div class="userlistContainer">
+    <!-- <div class="userlistContainer">
         <table class="userTable">
             <tr>
                 <th>S.no</th>
@@ -24,5 +25,38 @@
                 </td>
             </tr>
         </table>
-    </div>
+    </div> -->
 </div>
+
+
+
+
+
+<p-table [columns]="cols" [value]="usersList" [(selection)]="selectedUsers" selectionMode="multiple" dataKey="username"
+    responsiveLayout="scroll" [rowHover]="true">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th style="width: 3rem">
+                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <!-- <th pSortableColumn="{{col.field}}" *ngFor="let col of columns">
+                {{col.header }} <p-sortIcon field="{{col.field}}"></p-sortIcon>
+            </th> -->
+            <th pSortableColumn="{{col.field}}" *ngFor="let col of columns">
+                {{col.header}}
+                <p-sortIcon field="{{col.field}}"></p-sortIcon>
+            </th>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+            <td>
+                <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+            </td>
+            <td *ngFor="let col of columns">
+                {{rowData[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

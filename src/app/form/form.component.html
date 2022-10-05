@@ -1,22 +1,36 @@
-<!--template driven form -->
-<!-- <div>
+<!-- <h3>
+    template driven form
+</h3>
+<div>
     <h4>{{isUpdate?'Edit User Form':'Add User Form'}}</h4>
 </div>
-<div>
-    <label for="username">Name</label>
+<div [formGroup]="user">
     <div>
-        <input type="text" [(ngModel)]="name" name="username">
+        <label for="username">Name</label>
+        <div>
+            <input type="text" formControlName="username" name="username">
+            <div *ngIf="form['username'].invalid && (form['username'].dirty
+            ||form['username'].touched)">
+                <div *ngIf="form['username'].errors?.required">
+                    Name is required
+                </div>
+                <div *ngIf="form['username'].errors?.minlength">
+                    Name should be of length 2
+                </div>
+
+            </div>
+        </div>
     </div>
-</div>
-<div>
-    <label for="useremail">Email</label>
     <div>
-        <input type="email" [(ngModel)]="email" name="useremail">
+        <label for="useremail">Email</label>
+        <div>
+            <input type="email" formControlName="email" name="useremail">
+        </div>
     </div>
-</div>
-<div>
-    <button *ngIf="!isUpdate" (click)="addUser()">Add User</button>
-    <button *ngIf="isUpdate" (click)="editUser()">Edit User</button>
+    <div>
+        <button *ngIf="!isUpdate" (click)="addUser()">Add User</button>
+        <button *ngIf="isUpdate" (click)="editUser()">Edit User</button>
+    </div>
 </div> -->
 
 <!-- reactive form -->

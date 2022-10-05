@@ -26,6 +26,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FormComponent } from './form/form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    TableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
